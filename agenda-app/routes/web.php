@@ -15,3 +15,8 @@ Route::get('/cadastrar', function (){
 Route::get('/consultar', function(){
     return view('paginas/consultar');
 });
+
+//as rotas utilizando o padrao mvc
+Route::get('/cadastrar', [\App\Http\Controllers\registrarAtividadeController::class, 'index']);
+Route::get('/cadastrar/salvar', [\App\Http\Controllers\registrarAtividadeController::class, 'store']);
+Route::get('/consultar',[\App\Http\Controllers\registrarAtividadeController::class, 'consultar']);

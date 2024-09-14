@@ -1,5 +1,7 @@
 <x-layout titulo="Cadastrar">
-    <form class="container" action="" method="GET">
+    <form class="container" action="cadastrar/salvar" method="GET">
+
+    @csrf
 
     <div class="mb-3">
         <label for="dataCompromisso" class="form-label">Data Compromisso: </label>
